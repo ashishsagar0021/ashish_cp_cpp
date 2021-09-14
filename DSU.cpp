@@ -23,8 +23,8 @@ public:
 		int ru = root(u);
 		int rv = root(v);
 		if (ru == rv)return;
-		if (sz[ru] > sz[rv]) {
-			swap(ru, rv);//Union by size optimization
+		if (sz[ru] > sz[rv]) {//Union by size optimization
+			swap(ru, rv);
 		}
 		parent[ru] = rv;
 		sz[rv] += sz[ru];
